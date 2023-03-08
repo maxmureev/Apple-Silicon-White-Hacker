@@ -36,7 +36,7 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 Не очевидный момент: после остановки контейнера все данные в нем данные теряются
 
-Не знаешь, что такое Docker? Знакомство с Docker'ом для новичков https://www.youtube.com/@gosha_dudar/search?query=docker
+Не знаешь, что такое Docker? Видео [введение в Docker](https://www.youtube.com/watch?v=dNS61T4MmlM) для новичков. Видео [основные команды Docker'а](https://www.youtube.com/watch?v=EXHxkwDm7c0) для понимания происходящего описанного ниже. 
 
 ### Что выбрать для Docker'а?
 Если вы понимаете, что делаете, то сами знаете. Если же нет - ставьте в Кали.
