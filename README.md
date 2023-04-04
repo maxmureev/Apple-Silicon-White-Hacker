@@ -9,6 +9,9 @@ $ uname -a
 Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 2023; root:xnu-8792.81.3~2/RELEASE_ARM64_T6000 arm64 arm Darwin
 ```
 
+## На всякий случай
+Если есть возможность использовать x64 - пользуйся! Ставить Windows Server и Windows Desktop, и потом его настравить - крайне трудозатратное дело по времени и нервам, о чем в конце документа.
+
 # Базовое
 ## Гипервизор
 
