@@ -134,7 +134,56 @@ docker-compose -f ~/docker-compose.yml down
 ## Windows
 ### Windows Desktop
 
-Windows 11 ставится в Parallels из дистрибутива Parallels. Если найти ARM дистрибутив, должен встать в любом гипервизоре.
+Windows 10/11 в несколько кликов ставится в Parallels из дистрибутива Parallels. Если найти ARM дистрибутив, должен встать в любом гипервизоре. Я не нашел и пришлось идти по другому пути, описанном в инструкции на сайте [UTM](https://docs.getutm.app/guides/windows/#downloads). Чтобы сильно не вникать сделал выжимку, которая в спойлере. Если есть возможность просто скачать ISO'шник - сделай это. Если нет, смотри спойлер.
+
+<details><summary>Увлекательная сборка Винды из UUP Dump</summary>
+<p>
+
+1. Если еще не стоит, поставить [Homebrew](https://brew.sh)
+
+2. Поставить зависимости
+    ```
+    brew tap minacle/chntpw
+    brew install aria2 cabextract wimlib cdrtools minacle/chntpw/chntpw
+    ```
+    Описание зависимотей из ридми скрипта с сайта uupdump.net:
+    > The script requires the following applications:
+    >  * cabextract - to extract cabs
+    >  * wimlib-imagex - to export files from metadata ESD
+    >  * chntpw - to modify registry of first index of boot.wim
+    >  * genisoimage or mkisofs - to create ISO image
+    
+    Далее нужно VPN подключение из другой страны, хост uupdump.net недоступен
+
+
+4. Скачать список пакетов для скачивания:
+    ```
+    aria2c --no-conf --log-level=info --log="aria2_download.log" -o"download_list.txt" --allow-overwrite=true --auto-file-renaming=false "http://uupdump.net/get.php?id=e925283b-ad4e-4db1-8da1-e1fc160e5932&pack=en-us&edition=professional&aria2=2"
+    ```
+
+5. Скачать пакеты из списка:
+    ```
+    aria2c --no-conf --log-level=info --log="aria2_download.log" -x16 -s16 -j5 -c -R -d"UUPs"
+    ```
+    Качаться может долго, общий объем ~3,2 ГБ.
+
+6. Скачать скрипт по сборке файлов в ISO, сделать его исполняемым и запустить:
+    ```
+    curl https://raw.githubusercontent.com/uup-dump/converter/523e674cc0129278da32be90b3c54ea942502d1b/convert.sh -o convert.sh
+    chmod +x convert.sh
+    ./convert.sh
+    ```
+    Если все прошло успешно, в текущем каталоге появится файл 22621.1_PROFESSIONAL_ARM64_EN-US.ISO, с которого и надо установить виртуальную машину.
+
+7. В окне добавления виртуальной машины выбрать Virtualize, затем Windows, затем:
+    Убрать чекбокс "Import VHDX Image" 
+    Поставить чекбокс "Install Windows 10 or higher"
+    Поставить чекбокс "Install drivers and SPICE tools"
+
+    Если нет чекбокса "Install Windows 10 or higher", то обновить UTM. В моем случае стояла версия 3.2.4 (58) и на ней не завелось, после обновления до последней на момент установки - 4.1.6 (75) - все  успешно.
+
+</p>
+</details> 
 
 ### Windows Server
 
