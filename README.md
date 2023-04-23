@@ -36,6 +36,88 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 Качается [ISO](https://www.kali.org/get-kali/#kali-installer-images) под Apple Silicon (ARM64) и устанавливается в выбранный гипервизор. Если последняя версия не встает, попробуй предыдущую или лучше сразу `2022.2`, [прямая ссылка на 2022.2](https://old.kali.org/kali-images/kali-2022.2/kali-linux-2022.2-installer-arm64.iso)
 
+**Не надо качать ISO для Raspberry**
+
+
+<details><summary>Скрины по установке Kali 2022.2 в UTM</summary>
+<p>
+
+Этот раздел для тех, у кого установка Kali вызывает затруднения
+
+![image](https://user-images.githubusercontent.com/14827791/233830180-ef012249-ea8c-41c3-bbc4-5c8810685735.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830192-f8a22b26-9369-4ee8-8ae9-fd5365ed96a2.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830264-4588e04a-e6c2-493a-a8ce-7322b154a937.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830306-b63f9481-742b-494b-be6f-693fed8009ab.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830384-27fa903a-d8d5-4c22-9365-551174c75863.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830399-bfe5b2a3-7c04-4c57-b654-4d385b012dfe.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830455-1d0309f1-d2fb-4a9e-baa0-05b828ddb5f9.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830480-b31d227b-039f-4c5a-8a61-db51821f9e85.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830501-e1229752-6fdd-40e7-8fb0-0ca0d6a66157.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830539-10a10df3-30ea-40e2-9c12-2118a577a5ff.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233830571-afd18824-bcef-4b68-aedf-556a28c26f89.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831084-3ccf1179-e213-453a-82c8-def4589916d6.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831108-4cd7bb7c-e6b0-4b89-be1b-1aa00a66cdaf.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831127-40017717-5c1a-4524-b123-08805fceba27.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831141-b739daa1-3312-482a-af99-2f68d1f3578f.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831209-c51b5bb3-815f-4818-93f9-23b600ba7774.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831231-f9ae4fbc-f802-41e3-800f-45f3a7b33727.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832646-df1924ec-c1e4-4427-b4ce-249ec8b0166e.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832671-4de8ecba-36e8-46cb-b5c6-b3390d905f6d.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831393-1b5e2376-0ddc-47c3-b479-1dab29d6eecf.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831421-0e2a7d3d-7d47-4f5b-aac7-94b2f9619c3e.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831446-8d8c565b-5a06-4200-afef-110980b92729.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831473-c68638e9-8c63-430e-a140-063e4dfc9bd2.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831486-3803974d-20e6-4d66-9ae8-4dea58429e47.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831499-e03a7471-e77e-400e-ba13-b331db986f51.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831526-4d50e7f5-ce8b-432e-9402-627d01fcfd1b.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831549-fe157c8f-d544-44a2-8697-0a2376c78ed8.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233831617-9cb6c775-5c54-4a1c-92e4-fb90a43790eb.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832131-3c4fa0ce-4acd-4df7-8a80-f5dfd13ea1d1.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832243-2da4eeaf-0cce-40bf-bfe3-21ea1669bb13.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832308-313e113a-5203-4b09-aa1b-3adf01d66f24.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832380-6585f888-f854-4e9e-9d1c-2ba1d36a978e.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233832398-e8a8d876-3f79-4a49-88d0-1ff127dffd65.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233833588-2a2bd065-ef75-44f1-bbbc-8c2d8618aea6.png)
+
+![image](https://user-images.githubusercontent.com/14827791/233833611-d1317215-765c-4b13-a35d-3f95e377121e.png)
+
+
+</p>
+</details> 
+
 ## Docker
 
 Докер нужен для простоты запуска некоторых приложений
