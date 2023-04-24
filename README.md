@@ -221,9 +221,9 @@ docker-compose -f ~/docker-compose.yml down
 ## Windows
 ### Windows Desktop
 
-Windows 10/11 в несколько кликов ставится в Parallels из дистрибутива Parallels. Если найти ARM дистрибутив, должен встать в любом гипервизоре. Я не нашел и пришлось идти по другому пути, описанном в инструкции на сайте [UTM](https://docs.getutm.app/guides/windows/#downloads). Чтобы сильно не вникать сделал выжимку, которая в спойлере. 
+Windows 10/11 в несколько кликов ставится в Parallels из дистрибутива Parallels. Если найти ARM дистрибутив, должен встать в любом гипервизоре. Я не нашел и пришлось идти по другому пути, описанном в инструкции на сайте [UTM](https://docs.getutm.app/guides/windows/#downloads). Чтобы сильно не вникать сделал выжимку, которая в спойлере.  
 Если есть возможность просто скачать официальный ISO'шник под ARM - сделай это.   
-Если нет, качай собранный мной [ISO](https://drive.google.com/file/d/1riEuCp3F3V0bYtWZYiR3aR7wlyXm3T8r/view?usp=sharing).  
+Если нет, качай собранный мной [ISO](https://drive.google.com/file/d/1riEuCp3F3V0bYtWZYiR3aR7wlyXm3T8r/view?usp=sharing). Он полноценен - с возможностью ввести в домен, но на английском, языковой пакет доставить не проблема стандартными способами.   
 Если хочется собрать винду самостоятельно - смотри спойлер.
 
 <details><summary>Увлекательная сборка Винды из UUP Dump</summary>
