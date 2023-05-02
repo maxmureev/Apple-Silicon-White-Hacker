@@ -225,23 +225,41 @@ docker-compose -f ~/docker-compose.yml down
 
 <details><summary>Установка виртуальной машины GNS3 в UTM</summary>
 <p>
+
 ![image](https://user-images.githubusercontent.com/14827791/235587716-da101b99-2db0-4424-b5b1-44c65312daea.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235587814-b934fcb0-b3fa-48e7-ba50-23f4bafe3858.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235587899-455c2996-dd19-4e02-a2a7-1bd172cce24e.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235587973-0418f34e-50f1-45c1-aef5-f3c9be243b6e.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588028-e9d501c2-b800-4f59-83e9-d47ddd3c801f.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588083-28688349-0ad7-4fb9-a20b-054bc4d89d85.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588125-7d0050b7-7335-4134-8296-9433e058c971.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588186-81c22f5d-31ea-444e-bd8c-95ea4bb3d4fe.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588389-40d47684-00db-415d-a523-fb04394c6548.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588650-e15502cd-3b03-4292-8f7b-b1edaff90b1c.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588780-cb3df685-049c-4292-b2c9-4876f914c010.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588650-e15502cd-3b03-4292-8f7b-b1edaff90b1c.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235588907-56e5f98a-6af9-4064-9c89-6b052fd7ba51.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235589045-e7f3f425-a547-4c74-a39a-b10c5c57ee86.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235589126-9985edd6-1fc2-47cb-9601-1575ceb6f530.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235589210-521eeeb1-6b69-485b-bc2a-47275b3442ae.png)
+
 ![image](https://user-images.githubusercontent.com/14827791/235589321-1f3e8b1e-77dd-4c02-80db-fd00256e7610.png)
+
 </p>
 </details> 
 
