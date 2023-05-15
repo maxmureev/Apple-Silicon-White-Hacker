@@ -265,6 +265,70 @@ docker-compose -f ~/docker-compose.yml down
 
 После установки и запуска появится окно с IPадресом машины и варианты подключения к ней.
 
+### PowerShell Empire
+
+Ставить как написано в модуле не надо - не поставится, нет пакетов для arm64. 
+Последовательность такая:
+
+0. Предварительно **обязательно** сделать копию/снапшот виртуалки, если что-то пойдет не так
+
+1. Обновить систему
+    ```
+    sudo apt upgrade
+    sudo apt dist-upgrade
+    ```
+
+    Если в ходе обновления возникает ошибка, где `X.X.X-kaliX` - версия ядра для которого не конфигурятся хэдеры:
+    ```
+    dpkg: error processing package linux-image-X.X.X-kaliX-arm64 (--configure):
+     installed linux-image-X.X.X-kaliX-arm64 package post-installation script subprocess returned error exit status 1
+    dpkg: dependency problems prevent configuration of linux-headers-arm64:
+     linux-headers-arm64 depends on linux-headers-X.X.X-kaliX-arm64 (= 6.1.20-2kali1); however:
+      Package linux-headers-X.X.X-kaliX-arm64 is not configured yet.
+    ```
+
+    То удалить эти хэдеры и ядро:
+    ```
+    sudo apt remove linux-headers-X.X.X-kaliX-common
+    ```
+    В моем случае это был `linux-headers-6.1.0-kali7-common`
+
+    Если прошло нормально - повторить обновление и если прошло нормально, ребутнуть виртуалку
+
+2. Поставить зависимости
+
+    Dotnet SDK:
+    ```
+    curl -SL -o dotnet-sdk-6.0.408-linux-arm64.tar.gz https://download.visualstudio.microsoft.com/download/pr/9c4bff1b-9f35-44a3-95a3-d17224810b08/0f7426d4ce82cd5b55ed1b6f07877d5e/dotnet-sdk-6.0.408-linux-arm64.tar.gz    
+    sudo mkdir -p /usr/share/dotnet
+    sudo tar -zxf dotnet-sdk-6.0.408-linux-arm64.tar.gz -C /usr/share/dotnet
+    sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+    ```
+
+    PowerShell:
+    ```
+    curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.3.4/powershell-7.3.4-linux-arm64.tar.gz
+    sudo mkdir -p /opt/microsoft/powershell/7
+    sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+    sudo chmod +x /opt/microsoft/powershell/7/pwsh
+    sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+    ```
+
+3. Поставить PowerShell Empire
+
+    ```
+    sudo apt install powershell-empire
+    ```
+
+    Запуск сервера:
+    ```
+    sudo powershell-empire server
+    ```
+
+Логин и пароль для входа в веб интерфейсе:  
+username: empireadmin  
+password: password123
+
 ## Windows
 ### Windows Desktop
 
@@ -333,69 +397,3 @@ Windows 10/11 в несколько кликов ставится в Parallels �
 Поставил WS 2022 (описываемое ранее было чем-то другим). Субъективно кажется, что тормозов меньше, но они есть и значительные, можно сказать, что примерно так же. 
 
 CTRL+ALT+DEL нажимается сочетанием FN + Control + Option + Delete
-
-## Дополнительно
-
-### PowerShell Empire
-
-Ставить как написано в модуле не надо - не поставится, нет пакетов для arm64. 
-Последовательность такая:
-
-0. Предварительно **обязательно** сделать копию/снапшот виртуалки, если что-то пойдет не так
-
-1. Обновить систему
-    ```
-    sudo apt upgrade
-    sudo apt dist-upgrade
-    ```
-
-    Если в ходе обновления возникает ошибка, где `X.X.X-kaliX` - версия ядра для которого не конфигурятся хэдеры:
-    ```
-    dpkg: error processing package linux-image-X.X.X-kaliX-arm64 (--configure):
-     installed linux-image-X.X.X-kaliX-arm64 package post-installation script subprocess returned error exit status 1
-    dpkg: dependency problems prevent configuration of linux-headers-arm64:
-     linux-headers-arm64 depends on linux-headers-X.X.X-kaliX-arm64 (= 6.1.20-2kali1); however:
-      Package linux-headers-X.X.X-kaliX-arm64 is not configured yet.
-    ```
-
-    То удалить эти хэдеры и ядро:
-    ```
-    sudo apt remove linux-headers-X.X.X-kaliX-common
-    ```
-    В моем случае это был `linux-headers-6.1.0-kali7-common`
-
-    Если прошло нормально - повторить обновление и если прошло нормально, ребутнуть виртуалку
-
-2. Поставить зависимости
-
-    Dotnet SDK:
-    ```
-    curl -SL -o dotnet-sdk-6.0.408-linux-arm64.tar.gz https://download.visualstudio.microsoft.com/download/pr/9c4bff1b-9f35-44a3-95a3-d17224810b08/0f7426d4ce82cd5b55ed1b6f07877d5e/dotnet-sdk-6.0.408-linux-arm64.tar.gz    
-    sudo mkdir -p /usr/share/dotnet
-    sudo tar -zxf dotnet-sdk-6.0.408-linux-arm64.tar.gz -C /usr/share/dotnet
-    sudo ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
-    ```
-
-    PowerShell:
-    ```
-    curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.3.4/powershell-7.3.4-linux-arm64.tar.gz
-    sudo mkdir -p /opt/microsoft/powershell/7
-    sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
-    sudo chmod +x /opt/microsoft/powershell/7/pwsh
-    sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
-    ```
-
-3. Поставить PowerShell Empire
-
-    ```
-    sudo apt install powershell-empire
-    ```
-
-    Запуск сервера:
-    ```
-    sudo powershell-empire server
-    ```
-
-Логин и пароль для входа в веб интерфейсе:  
-username: empireadmin  
-password: password123
