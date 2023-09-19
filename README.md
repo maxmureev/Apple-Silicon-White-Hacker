@@ -163,6 +163,33 @@ sudo apt install ghidra
 ```
 ghidra
 ```
+### sublist3r
+Скорее всего у тебя тоже не печатается вывод доменов при запуске команды, например `sublist3r -v -d skillfactory.ru`, надо клонировать исходники, поставить зависимости и поправить одну строку:
+
+```
+git clone https://github.com/aboul3la/Sublist3r.git ~/Sublist3r
+cd ~/Sublist3r
+pip3 install -r requirements.txt
+sudo apt-get install python3-requests python3-dnspython python-argparse
+nano sublist3r.py
+```
+
+Заменить строку 
+```
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+```
+на
+```
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0',
+```
+
+
+Запускать так:
+
+```
+cd ~/Sublist3r
+python sublist3r.py -v -d skillfactory.ru
+```
 
 ## Лабы
 ### WebGoat
