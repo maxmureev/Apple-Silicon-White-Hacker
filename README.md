@@ -28,9 +28,9 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) пока в бете. Бесплатен. Кали на него не встает. Последняя протестированная мной версия 7.0.6_BETA4 r155176.
 
-[Parallels](https://www.parallels.com/products/desktop/). Платный. Можно найти кряк, в интернете есть. Под ним работают только ARM дистрибутивы. В целом хорош.
+[Parallels](https://www.parallels.com/products/desktop/). Платный. Можно найти кряк, в интернете есть. Под ним работают **только ARM** дистрибутивы. В целом хорош.
 
-[VMware Fusion Player](https://customerconnect.vmware.com/evalcenter?p=fusion-player-personal-13). Бесплатен для не коммерческого использования. Сложная регистрация, ручное рассмотрение заявки на скачивание. Не осилил. Кажется перспективным из-за функционала и бесплатности.
+[VMware Fusion Player](https://customerconnect.vmware.com/evalcenter?p=fusion-player-personal-13). Бесплатен для не коммерческого использования. Сложная регистрация, ручное рассмотрение заявки на скачивание. Не осилил. Кажется перспективным из-за функционала и бесплатности. Под ним работают **только ARM** дистрибутивы.
 
 Не знаешь что выбрать - **используй UTM**.
 
