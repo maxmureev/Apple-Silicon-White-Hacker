@@ -26,7 +26,7 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 [UTM](https://mac.getutm.app/). Бесплатен. Под капотом QEMU. Умеет как нативный режим под ARM, так и режим эмуляции для x64. Пока это единственный способ запустить Windows Server и лабу Escalate My Privilege из шестого блока.
 
-[VirtualBox](https://www.virtualbox.org/wiki/Downloads) пока в бете. Бесплатен. Кали на него не встает. Последняя протестированная мной версия 7.0.6_BETA4 r155176.
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads) пока в бете. Бесплатен. Кали на него не встает. Последняя протестированная мной версия 7.0.13_BETA4 r160458 (декабрь 2023).
 
 [Parallels](https://www.parallels.com/products/desktop/). Платный. Можно найти кряк, в интернете есть. Под ним работают **только ARM** дистрибутивы. В целом хорош.
 
