@@ -38,6 +38,8 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 ### Kali Linux виртуалка
 
+#### Установка
+
 Качается [ISO](https://www.kali.org/get-kali/#kali-installer-images) под Apple Silicon (ARM64) и устанавливается в выбранный гипервизор. Если последняя версия не встает, попробуй предыдущую или лучше сразу `2022.2`, [прямая ссылка на 2022.2](https://old.kali.org/kali-images/kali-2022.2/kali-linux-2022.2-installer-arm64.iso)
 
 <details><summary>Скрины по установке Kali 2022.2 в UTM</summary>
@@ -121,7 +123,47 @@ Darwin mac.local 22.3.0 Darwin Kernel Version 22.3.0: Mon Jan 30 20:38:37 PST 20
 
 Ходят слухи, что можно запустить из официального образа виртуального жесткого диска для Raspberry, но сам этого не проверял. Если ты проверишь и оно будет работать - свяжись со мной, добавим в документ для упрощения жизни последующим студентам.
 
-Если использование GUI не требуется, а оно не требуется для большиства задач, поставь в Кали SSH и подключайся к ней из терминала. Так удобнее.
+
+#### SSH
+Если использование GUI (Graphical User Interface) не требуется, а оно не требуется для большиства задач, поставь в Кали SSH и подключайся к ней из терминала. Так удобнее. Для этого в Кали сделать:
+
+```
+sudo apt install openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
+
+С мака подключаться так:
+```
+ssh <user>@<kali_ip_address>
+```
+
+Таким образом отпадет необходимость копипастить через окно UTM в Кали через GUI.
+
+#### Шаринг буфера обмена для GUI
+
+В Кали надо поставить эти пакеты:
+
+```
+sudo apt install qemu-guest-agent spice-vdagent spice-webdavd
+```
+
+Выключить виртуалку и настроить гостевую систему
+1. Settings > Sharing: **Enable clipboard sharing**
+2. Settings > Display >  Emulated display card: **virtio-gpu-pci**
+
+<details><summary>Скрины по настройке буфера обмена</summary>
+<p>
+
+![image](https://github.com/maxmureev/Apple-Silicon-White-Hacker/assets/14827791/6041260e-f53e-41e9-8f81-945e86aec65d)
+![image](https://github.com/maxmureev/Apple-Silicon-White-Hacker/assets/14827791/349570a3-2e78-4881-8eaa-a00346ffa3be)
+
+</p>
+</details> 
+
+Внутри Кали работает такое сочетание:
+- Control(⌃) + Shift ⇧ + c - копировать
+- Control(⌃) + Shift ⇧ + v - вставить
 
 ## Docker
 
