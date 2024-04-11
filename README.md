@@ -140,6 +140,15 @@ ssh <user>@<kali_ip_address>
 
 Таким образом отпадет необходимость копипастить через окно UTM в Кали через GUI.
 
+<details><summary>Как это выглядит</summary>
+<p>
+
+![tty](https://github.com/maxmureev/Apple-Silicon-White-Hacker/assets/14827791/382b581e-3f8d-4e0b-8fd6-5a66ca054c7e)
+
+
+</p>
+</details> 
+
 #### Шаринг буфера обмена для GUI
 
 В Кали надо поставить эти пакеты:
