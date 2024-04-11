@@ -171,8 +171,8 @@ sudo apt install qemu-guest-agent spice-vdagent spice-webdavd
 </details> 
 
 Внутри Кали работает такое сочетание:
-- Control(⌃) + Shift ⇧ + c - копировать
-- Control(⌃) + Shift ⇧ + v - вставить
+- Control(⌃) + Shift(⇧) + c - копировать
+- Control(⌃) + Shift(⇧) + v - вставить
 
 ## Docker
 
